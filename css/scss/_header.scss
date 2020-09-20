@@ -1,0 +1,186 @@
+.top {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+    background-color: $mainBackColor;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+.header {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+
+.header__left, .header__right {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 37px;
+}
+
+.header__logo p {
+    color: #222222;
+    font-size: 27px;
+    font-weight: 300;
+    letter-spacing: 0.68px;
+    text-transform: uppercase;
+}
+
+.header__logo img {
+    padding-right: 10px;
+    height: 51px;
+}
+
+.header__logo p span {
+    font-size: 27px;
+    color: $mainColor;
+    font-weight: 900;
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 400px;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    height: 38px;
+}
+
+.header__search input {
+    height: inherit;
+    outline: none;
+    overflow: hidden;
+    width: 257px;
+    padding-left: 14px;
+    border: none;
+    border-right: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+
+}
+.header__search input::placeholder {
+    color: #a4a4a4;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.35px;
+}
+.search__browse {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+    width: 87px;
+    background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%);
+    cursor: pointer;
+}
+
+.search__browse:hover {
+    background-image: linear-gradient(to bottom, #f9f9f9 0%, #f16d7f 100%);
+}
+
+.fas1 {
+    color: #838383;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.header__search button {
+    outline: none;
+    overflow: hidden;
+    border: none;
+    height: inherit;
+    background-color: $mainBackColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fa-search:hover {
+    color: $mainColor;
+}
+
+.fa-search {
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #a4a4a4;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.cart {
+    margin-right: 26px;
+}
+.my_account_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.38px;
+    width: 130px;
+    height: 38px;
+    background-color: $mainColor;
+    transition: all 0.5s
+}
+.my_account_box:hover {
+    background-color: $buttonHoverColor;
+}
+.top-nav {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-top: 1px solid #ececec;
+    margin-top: 100px;
+    width: 100%;
+    position: fixed;
+    background-color: $mainBackColor;
+    z-index: 2;
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    width: 680px;
+}
+
+.menu-list li {
+    list-style-type: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.menu-list li:hover {
+    border-bottom: 3px solid #ef5b70;
+    padding-bottom: 14px;
+    margin-bottom: -17px;
+}
