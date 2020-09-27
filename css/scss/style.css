@@ -1488,6 +1488,10 @@ details summary::-webkit-details-marker {
   height: 83px;
   width: 83px; }
 
+.subscribe-left-box img:hover {
+  transform: scale(1.5, 1.5);
+  transition-duration: 2s; }
+
 .subs-left-box-text {
   display: flex;
   flex-wrap: wrap;
