@@ -97,6 +97,7 @@
     background-image: url("../../img/banner-2.png");
     background-color: #dadad2;
     background-repeat: no-repeat;
+    background-position: right;
 }
 
 .banner4 {
@@ -122,6 +123,7 @@
     text-transform: uppercase;
     letter-spacing: 0.45px;
 }
+
 .banner-text-style2 {
     padding-top: 5px;
     padding-left: 18px;
@@ -157,6 +159,7 @@
 .featured-items-text {
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 50px;
     color: #222222;
     font-size: 30px;
     font-weight: 700;
@@ -218,7 +221,7 @@
     color: $mainColor;
 }
 .cart-order:hover div {
-    filter: invert(48%) sepia(17%) saturate(6948%) hue-rotate(316deg) brightness(109%) contrast(89%);
+    filter: invert(40%) sepia(17%) saturate(6948%) hue-rotate(316deg) brightness(109%) contrast(89%);
 }
 
 .cart-order p {

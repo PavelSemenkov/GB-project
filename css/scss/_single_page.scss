@@ -41,9 +41,29 @@
 }
 
 .sp-slider-box__img {
-  justify-content: center;
-  display: flex;
   margin-top: -20px;
+}
+
+.sp-slider-box__img > img {
+  position: relative;
+  animation-name: sliding;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.sp-slider-box__img > img:hover {
+  animation-play-state: paused;
+}
+
+@keyframes sliding {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
 
 .product-details-box {
@@ -227,8 +247,6 @@ section > div > div > i {
   transition: all 0.5s;
 }
 
-
-
 .p-d-b_add-to-cart img{
   width: 26px;
   height: 24px;
@@ -277,6 +295,7 @@ section > div > div > i {
   width: 261px;
   height: 280px;
   background-color: #e9e9e9;
+  z-index: 1;
 }
 
 .white-layer1 {
@@ -291,4 +310,9 @@ section > div > div > i {
 .white-layer1:hover {
   z-index: 0;
   cursor: pointer;
+}
+
+.y-m-l-photo-box:hover > img {
+  -webkit-transform: rotateY(180deg);
+  transition-duration: 1s;
 }

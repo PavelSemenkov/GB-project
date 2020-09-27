@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Single Page</title>
+    <meta charset="UTF-8" />
+    <title>Checkout</title>
     <link rel="stylesheet" href="css/scss/style.css">
     <script src="https://kit.fontawesome.com/2c1f09cccd.js" crossorigin="anonymous"></script>
 </head>
@@ -202,105 +202,90 @@
                 </div>
             </div>
         </nav>
-        <div class="sp-slider-box">
-            <div class="sp-slider-box__nav">
-                <div class="sp_slider-box__roll-left">
-                    <i class="fas fa-angle-left"></i>
-                </div>
-                <div class="sp-slider-box__img container">
-                    <img src="img/sp_slider-1.png" alt="product">
-                </div>
-                <div class="sp_slider-box__roll-right">
-                    <i class="fas fa-angle-right"></i>
-                </div>
-            </div>
-            <div class="product-details-box container">
-                <div class="product-details-box__hc">
-                    Women collection
-                    <div></div>
-                </div>
-                <div class="product-details-box__hn">
-                    Moschino Cheap And Chic
-                </div>
-                <div class="product-details-box__hp">
-                    Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.
-                </div>
-                <div class="product-details-box__md">
-                    <div>MATERIAL: <span>COTTON</span></div>
-                    <div>DESIGNER: <span>BINBURHAN</span></div>
-                </div>
-                <div class="product-details-box__pc">
-                    $561
-                </div>
-                <div class="product-details-box__hr container"></div>
-                <div class="product-details-box__cart-box">
-                    <form method="get" class="p-d-b__form">
-                        <section>
-                            <div style="float:left;margin-right:53px;">
-                                <label for="color">Choose Color</label>
-                                <div><img src="img/rectangle_1.png" alt="color"><input id="color" type="text" name="color" class="p-d-b__input-color" placeholder="Red"><i class="fas fa-angle-down fas1"></i></div>
+        <div class="shipping-address container">
+            <!-- <input type="checkbox" class="spoiler-01" id="spoiler-01">
+            <label for="spoiler-01">01. Shipping address</label> -->
+            <div class="spoiler-01__box">
+                <details>
+                    <summary>01. Shipping address</summary>
+                    <div class="details">
+                        <div class="spoiler-01__box-left">
+                            <form method="get" id="register_form">
+                                <div>
+                                    <h5>Check as a guest or register</h5>
+                                    <h6>Register with us for future convenience</h6>
+                                </div>
+                                <div>
+                                    <input type="radio" id="checkout_as_guest" name="register" value="checkout">
+                                    <label for="checkout_as_guest">Checkout as guest</label>
+                                    <br><br>
+                                    <input type="radio" id="register" name="register" value="register">
+                                    <label for="register">Register</label>
+                                </div>
+                                <div>
+                                    <h5>Register and save time!</h5>
+                                    <h6>Register with us for future convenience</h6>
+                                </div>
+                                <div>
+                                    <h4><i class="fas fa-angle-double-right"></i> Fast and easy checkout</h4>
+                                    <h4><i class="fas fa-angle-double-right"></i> Easy access to your order history and status</h4>
+                                </div>
+                            </form>
+                            <button type="submit" form="register_form" value="Submit" class="register_continue">Continue</button>
+                        </div>
+                        <div class="spoiler-01__box-right">
+                            <form method="get" id="login_form" class="login_form">
+                                <div>
+                                    <h5>Already registered?</h5>
+                                    <h6>Please log in below</h6>
+                                </div>
+                                <div>
+                                    <label for="email">EMAIL ADDRESS <span>*</span></label>
+                                    <input type="email" id="email" name="email" class="email_input" placeholder="Enter Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+                                    <br><br>
+                                    <label for="password">PASSWORD <span>*</span></label>
+                                    <input type="password" id="password" name="password" placeholder="Enter Your Password" class="password_input" required>
+                                    <br>
+                                    <p>* Required Fileds</p>
+                                </div>
+                            </form>
+                            <div class="login_button">
+                                <button type="submit" form="login_form" value="Submit" class="login_continue">LOG IN</button>
+                                <a href="#">Forgot Password?</a>
                             </div>
-                            <div style="float:left;margin-right:53px;">
-                                <label for="size">Choose Size</label>
-                                <input id="size" type="text" name="color" class="p-d-b__input-size" placeholder="XXL">
-                            </div>
-                            <div style="float:left">
-                                <label for="quantity">Quantity</label>
-                                <input id="quantity" type="text" name="color" class="p-d-b__input-size" placeholder="2">
-                            </div>
-                            <br style="clear:both;" />
-                            <button class="p-d-b_add-to-cart">
-                                <img src="img/cart.svg" alt="cart">
-                                <p>&nbsp;&nbsp;&nbsp;&nbsp;Add to Cart</p>
-                            </button>
-                        </section>
-                    </form>
-                </div>
+                        </div>
+                    </div>
+                </details>
             </div>
-        </div>
-        <div class="you-may-like container">
-            you may like also
-        </div>
-        <div class="y-m-l-items-box container">
-            <div class="featured-items">
-                <div class="y-m-l-photo-box"><img src="img/product_ym1.png" alt="product" class="y-m-l-photo"></div>
-                <div class="layers">
-                    <div class="white-layer1"></div>
-                </div>
-                <div class="featured-item-text">
-                    <p>BLAZE LEGGINGS</p>
-                    <h6>$52.00</h6>
-                </div>
+            <div class="spoiler-01__box">
+                <details>
+                    <summary>02.   BILLING INFORMATION</summary>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut autem cupiditate dignissimos et expedita facilis impedit iste, molestiae nostrum officia perferendis perspiciatis porro praesentium provident quibusdam quidem ratione rem repellendus reprehenderit sequi sunt vel. Animi consequuntur dolores, earum eveniet, minus molestiae necessitatibus nihil numquam optio sint sit vel vitae.</p>
+                </details>
             </div>
-            <div class="featured-items">
-                <div class="y-m-l-photo-box"><img src="img/product_ym2.png" alt="product" class="y-m-l-photo"></div>
-                <div class="layers">
-                    <div class="white-layer1"></div>
-                </div>
-                <div class="featured-item-text">
-                    <p>ALEXA SWEATER</p>
-                    <h6>$52.00</h6>
-                </div>
+            <div class="spoiler-01__box">
+                <details>
+                    <summary>03.   SHIPPING INFORMATION</summary>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut autem cupiditate dignissimos et expedita facilis impedit iste, molestiae nostrum officia perferendis perspiciatis porro praesentium provident quibusdam quidem ratione rem repellendus reprehenderit sequi sunt vel. Animi consequuntur dolores, earum eveniet, minus molestiae necessitatibus nihil numquam optio sint sit vel vitae.</p>
+                </details>
             </div>
-            <div class="featured-items">
-                <div class="y-m-l-photo-box"><img src="img/product_ym3.png" alt="product" class="y-m-l-photo"></div>
-                <div class="layers">
-                    <div class="white-layer1"></div>
-                </div>
-                <div class="featured-item-text">
-                    <p>AGNES TOP</p>
-                    <h6>$52.00</h6>
-                </div>
+            <div class="spoiler-01__box">
+                <details>
+                    <summary>04.   SHIPPING METHOD</summary>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut autem cupiditate dignissimos et expedita facilis impedit iste, molestiae nostrum officia perferendis perspiciatis porro praesentium provident quibusdam quidem ratione rem repellendus reprehenderit sequi sunt vel. Animi consequuntur dolores, earum eveniet, minus molestiae necessitatibus nihil numquam optio sint sit vel vitae.</p>
+                </details>
             </div>
-            <div class="featured-items">
-                <div class="y-m-l-photo-box"><img src="img/product_ym4.png" alt="product" class="y-m-l-photo"></div>
-                <div class="layers">
-                   <div class="white-layer1"></div>
-                </div>
-                <div class="featured-item-text">
-                    <p>SYLVA SWEATER</p>
-                    <h6>$52.00</h6>
-                </div>
+            <div class="spoiler-01__box">
+                <details>
+                    <summary>05.   PAYMENT METHOD</summary>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut autem cupiditate dignissimos et expedita facilis impedit iste, molestiae nostrum officia perferendis perspiciatis porro praesentium provident quibusdam quidem ratione rem repellendus reprehenderit sequi sunt vel. Animi consequuntur dolores, earum eveniet, minus molestiae necessitatibus nihil numquam optio sint sit vel vitae.</p>
+                </details>
+            </div>
+            <div class="spoiler-01__box">
+                <details>
+                    <summary>06.   ORDER REVIEW</summary>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut autem cupiditate dignissimos et expedita facilis impedit iste, molestiae nostrum officia perferendis perspiciatis porro praesentium provident quibusdam quidem ratione rem repellendus reprehenderit sequi sunt vel. Animi consequuntur dolores, earum eveniet, minus molestiae necessitatibus nihil numquam optio sint sit vel vitae.</p>
+                </details>
             </div>
         </div>
     </main>

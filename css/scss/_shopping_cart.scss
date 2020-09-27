@@ -1,44 +1,4 @@
-.new-arrivals {
-    padding-top: 151px;
-    height: 148px;
-    width: 100%;
-    background-color: #f8f3f4;
-}
 
-.new-arrivals-nav {
-    height: 148px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.new-arrivals-nav__h1 {
-    color: $mainColor;
-    font-size: 24px;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-.new-arrivals-nav__menu {
-    display: flex;
-}
-
-.new-arrivals-nav__menu a {
-    color: #636363;
-    font-size: 14px;
-    font-weight: 300;
-    text-transform: uppercase;
-}
-
-.new-arrivals-nav__menu a:hover,
-.new-arrivals-nav__menu a:focus {
-    color: $mainColor;
-    font-weight: 700;
-}
-
-.new-arrivals-nav__menu span {
-    font-size: 14px;
-}
 
 .shopping-cart-box {
     padding-top: 90px;
@@ -88,11 +48,6 @@
     margin-right: 153px;
     display: flex;
     flex-direction: column;
-}
-
-.product-information img {
-    width: 100px;
-    height: 115px;
 }
 
 .product-information h3 {
@@ -235,11 +190,30 @@
     outline: none;
 }
 
-.shipping-box__country i {
-    color: #bdbdbd;
-    position: absolute;
-    right: 13px;
-    bottom: 13px;
+.shipping-box__country select {
+    padding-left: 18px;
+    width: 377px;
+    height: 45px;
+    border: 1px solid #eaeaea;
+    outline: none;
+    color: #000000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding-right: 2rem;
+}
+
+.shipping-box__country select option {
+    color: #000000;
+    font-size: 13px;
+    font-weight: 300;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
 }
 
 .shipping-box__country i:hover {
@@ -374,4 +348,9 @@
 
 .proceed-to-checkout:hover {
     background-color: $buttonHoverColor;
+}
+
+.shopping-cart-box__item1 > img:hover {
+    transform: rotate3d(1, 2, 3, 360deg);
+    transition-duration: 3s;
 }
