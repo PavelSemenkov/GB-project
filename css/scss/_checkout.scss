@@ -1,0 +1,195 @@
+.shipping-address {
+  margin-top: 90px;
+}
+
+.spoiler-01__box {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.spoiler-01__box-left {
+  margin-left: 35px;
+  margin-top: 20px;
+  margin-right: 0;
+  width: 265px;
+  height: 390px;
+}
+
+.spoiler-01__box-left h5{
+  margin-bottom: 15px;
+  color: #222222;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.spoiler-01__box-left h6 {
+  margin-top: 0;
+  color: #b3b2b2;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+.spoiler-01__box-left div h4 {
+  margin: 0;
+  padding-bottom: 15px;
+  color: #b3b2b2;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+.spoiler-01__box-left div input {
+  display: table-cell;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.spoiler-01__box-left div label {
+  color: #222222;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.register_continue {
+  margin-top: 25px;
+  @extend %displayFlexAlignCenter;
+  justify-content: center;
+  color: #4a4a4a;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 180px;
+  height: 50px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.register_continue:hover {
+  background-color: $mainColor;
+  color: $mainBackColor;
+}
+
+.details {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+details summary {
+  color: #222222;
+  outline: none;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+.spoiler-01__box-right {
+  width: 395px;
+  height: 390px;
+  margin-left: 35px;
+  margin-top: 20px;
+  margin-right: 0;
+}
+.spoiler-01__box-right h5{
+  margin-bottom: 15px;
+  color: #222222;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.spoiler-01__box-right h6 {
+  margin-top: 0;
+  color: #b3b2b2;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+.login_form div label {
+  color: #222222;
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.login_form div label span {
+  color: #ff0d0d;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.login_form div p {
+  color: #ff0d0d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.email_input,
+.password_input{
+  padding-left: 15px;
+  outline: none;
+  margin-top: 15px;
+  width: 375px;
+  height: 45px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+}
+
+.login_button {
+  bottom: 0;
+  height: 50px;
+  width: 323px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login_continue {
+  margin-top: 5px;
+  @extend %displayFlexAlignCenter;
+  justify-content: center;
+  color: #4a4a4a;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 180px;
+  height: 50px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.login_continue:hover {
+  background-color: $mainColor;
+  color: $mainBackColor;
+}
+
+.login_button a {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login_button a:hover {
+  color: $mainColor;
+}

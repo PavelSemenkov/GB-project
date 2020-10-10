@@ -1,0 +1,7 @@
+$mainColor: #f16d7f;
+$mainBackColor: #ffffff;
+$buttonHoverColor: darken($mainColor, 40%);
+%displayFlexAlignCenter {
+  display: flex;
+  align-items: center;
+}
