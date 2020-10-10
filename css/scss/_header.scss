@@ -55,7 +55,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    width: 400px;
+    max-width: 400px;
     border-radius: 3px;
     border: 1px solid #e6e6e6;
     height: 38px;
@@ -88,7 +88,7 @@
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.35px;
-    min-width: 87px;
+    width: 87px;
     background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%);
     cursor: pointer;
 }
