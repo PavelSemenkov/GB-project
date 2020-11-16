@@ -57,24 +57,10 @@
     margin-top: 98px;
     height: 823px;
     display: flex;
-    justify-content: space-between;
-    align-content: space-between;
-}
-
-.banner-box_1 {
-    width: 560px;
-    display: flex;
-    justify-content: space-between;
-    align-content: space-between;
     flex-wrap: wrap;
-}
-
-.banner-box_2 {
-    width: 560px;
-    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-content: space-between;
-    flex-wrap: wrap;
 }
 
 .banner1 {
@@ -211,6 +197,7 @@
     height: 39px;
     outline: 1px solid #ffffff;
     z-index: 1;
+    cursor: pointer;
 }
 
 .cart-order:hover {

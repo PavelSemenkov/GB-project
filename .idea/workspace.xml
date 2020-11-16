@@ -23,18 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a1add88-bc29-4c19-96fa-5871c7afd800" name="Default Changelist" comment="added single_page.html, shopping_cart.html">
-      <change afterPath="$PROJECT_DIR$/css/scss/_media.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/scss/_product.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/scss/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/scss/_footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/scss/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/scss/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/scss/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/scss/_index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/scss/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/scss/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/scss/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/scss/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/single_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="SELECTIVE" />
-    <property name="last_opened_file_path" value="C:/Ruby27-x64/bin/sass.bat" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
@@ -104,6 +99,10 @@
       <workItem from="1601757975542" duration="1895000" />
       <workItem from="1601801462308" duration="1626000" />
       <workItem from="1602333008114" duration="19691000" />
+      <workItem from="1602890318169" duration="103000" />
+      <workItem from="1605426905274" duration="232000" />
+      <workItem from="1605450816046" duration="2150000" />
+      <workItem from="1605457044560" duration="19784000" />
     </task>
     <task id="LOCAL-00001" summary="added single_page.html, shopping_cart.html">
       <created>1600618347212</created>
@@ -166,10 +165,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1102" y="510" width="638" height="658" key="EditFileWatcherDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1600537657011" />
-    <state x="914" y="662" key="FileChooserDialogImpl" timestamp="1600503743652">
+    <state x="914" y="662" key="FileChooserDialogImpl" timestamp="1602890417405">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="914" y="662" key="FileChooserDialogImpl/0.0.2560.1440@0.0.2560.1440" timestamp="1600503743652" />
+    <state x="914" y="662" key="FileChooserDialogImpl/0.0.2560.1440@0.0.2560.1440" timestamp="1602890417405" />
     <state x="807" y="356" key="SettingsEditor" timestamp="1600537658237">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -178,10 +177,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1017" y="462" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1601222548186" />
-    <state x="790" y="429" key="run.anything.popup" timestamp="1600552094360">
+    <state x="790" y="429" key="run.anything.popup" timestamp="1605457827209">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="790" y="429" key="run.anything.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1600552094360" />
+    <state x="790" y="429" key="run.anything.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1605457827209" />
     <state x="1217" y="588" key="scopes" timestamp="1600503714065">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

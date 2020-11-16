@@ -3,7 +3,6 @@
     background-color: #f2f2f2;
 }
 .subscribe-box {
-    max-width: 1610px;
     min-height: 438px;
     margin: 0 auto;
     margin-top: 97px;
@@ -12,6 +11,7 @@
     background-color: #a0a0a0;
     background-blend-mode: overlay;
     background-size: cover;
+    background-position-y: bottom;
 }
 
 .subscribe-box > div {
