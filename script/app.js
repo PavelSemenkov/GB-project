@@ -35,10 +35,6 @@ document.querySelectorAll('.cart-order').forEach(function (button){
             total += parseInt(price.innerText);
             document.getElementById('cart-total').innerHTML = ('$' + total);
         });
-        document.querySelector('.cart-box-dropdown').style.display = "block";
-        setTimeout(function (){
-            document.querySelector('.cart-box-dropdown').style.display = "none";
-        }, 3000);
         document.querySelector('.cart-contain-box__items').querySelectorAll('.cart-product__delete > i').forEach(function (del) {
             del.addEventListener('click', function (event) {
                 let delButton = event.currentTarget;
@@ -50,11 +46,14 @@ document.querySelectorAll('.cart-order').forEach(function (button){
     });
 });
 
-document.querySelector('.cart').addEventListener('mousemove', function (){
+document.querySelector('.cart').addEventListener('mouseover', function (){
     document.querySelector('.cart-box-dropdown').style.display = "block";
-    document.querySelector('.cart-box-dropdown').addEventListener('mouseleave', function () {
-        setTimeout(() => {
-            this.style.display = "none";
-        }, 2000);
-    })
+});
+document.querySelector('.cart-box').addEventListener('mousemove', function (){
+    document.querySelector('.cart-box-dropdown').style.display = "block";
+});
+document.querySelector('.cart-box-dropdown').addEventListener('mouseleave', function () {
+    setTimeout(() => {
+        this.style.display = "none";
+    }, 2000);
 });
