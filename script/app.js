@@ -67,7 +67,7 @@ const indexApp = document.querySelector('.featured-items-box');
  */
 const jsonProductParse = () => {
     fetch(
-        "response/products.json",
+        "https://raw.githubusercontent.com/PavelSemenkov/GB-project/JS2Lesson03/response/products.json",
         {
             method: 'GET',
             headers: {},
