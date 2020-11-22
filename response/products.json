@@ -1,0 +1,66 @@
+[
+  {
+    "id_product": 1,
+    "product_name": "Куртка",
+    "price": 120,
+    "product_photo_src": "img/featured_item_1.png",
+    "product_size": "L",
+    "product_color": "white"
+  },
+  {
+    "id_product": 2,
+    "product_name": "Рубашка",
+    "price": 50,
+    "product_photo_src": "img/featured_item_2.png",
+    "product_size": "L",
+    "product_color": "white"
+  },
+  {
+    "id_product": 3,
+    "product_name": "Брюки",
+    "price": 70,
+    "product_photo_src": "img/featured_item_3.png",
+    "product_size": "L",
+    "product_color": "white"
+  },
+  {
+    "id_product": 4,
+    "product_name": "Футболка",
+    "price": 150,
+    "product_photo_src": "img/featured_item_4.png",
+    "product_size": "L",
+    "product_color": "white"
+  },
+  {
+    "id_product": 5,
+    "product_name": "Куртка",
+    "price": 230,
+    "product_photo_src": "img/featured_item_5.png",
+    "product_size": "L",
+    "product_color": "white"
+  },
+  {
+    "id_product": 6,
+    "product_name": "Футболка",
+    "price": 45,
+    "product_photo_src": "img/featured_item_6.png",
+    "product_size": "L",
+    "product_color": "white"
+  },
+  {
+    "id_product": 7,
+    "product_name": "Брюки",
+    "price": 120,
+    "product_photo_src": "img/featured_item_7.png",
+    "product_size": "L",
+    "product_color": "white"
+  },
+  {
+    "id_product": 8,
+    "product_name": "Футболка",
+    "price": 77,
+    "product_photo_src": "img/featured_item_8.png",
+    "product_size": "L",
+    "product_color": "white"
+  }
+]

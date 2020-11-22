@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamburger</title>
+    <link rel="stylesheet" href="css/scss/style.css">
+</head>
+<body>
+    <div class="hamburger-box container">
+        <h1>Выберите гамбургер</h1>
+        <input type="radio" id="choose_size_small" name="size" value="small">
+        <label for="choose_size_small" title="Стоимость 50р, Калорийность 20">Маленький</label>
+        <input type="radio" id="choose_size_big" name="size" value="big">
+        <label for="choose_size_big" title="Стоимость 100р, Калорийность 40">Большой</label>
+        <div>
+            <button class="show_stuffing">Выбрать начинку</button>
+        </div>
+        <div class="stuffing">
+
+        </div>
+
+        <div>Состав: <span class="details"></span></div>
+        <div>Цена: <span class="price"></span></div>
+        <div>Калории: <span class="calories"></span></div>
+        <script src="script/hamburger.js"></script>
+    </div>
+
+</body>
+</html>
