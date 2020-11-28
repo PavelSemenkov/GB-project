@@ -82,7 +82,7 @@ const jsonProductParse = () => {
         }
         modifyCartIndex.addToCart();
     });
-}
+};
 
 jsonProductParse();
 
@@ -108,6 +108,7 @@ jsonProductParse();
 class ModifyCart {
     constructor(goodsCard) {
         this.goodsCard = goodsCard;
+        this.total = 0;
     }
 
     /**
@@ -119,7 +120,7 @@ class ModifyCart {
     // должны передаваться данные по индексу напрямую из БД, но пока не знаю как это сделать,
     // сделал заготовку для product__${id} на будущее. Посоветуйте в правильном ли направлении думаю.
     addToCart() {
-        document.querySelectorAll(this.goodsCard).forEach((button) =>{
+        document.querySelectorAll(this.goodsCard).forEach((button) => {
             button.addEventListener('click', (event) => {
                 let button = event.currentTarget;
                 let cardMainBlock = button.parentNode.parentNode;
@@ -130,10 +131,33 @@ class ModifyCart {
                 document.querySelector('.cart-contain-box__items').innerHTML += this.renderCart(orderProductImage, orderProductPrice, orderProductName, orderProductId);
 
                 //Вызов расчета суммы при добавления товара
-                this.goodsSum();
+                this.goodsSum(orderProductPrice);
+
+                //Запросы к апи заглушке при добавлении товара
+                this.addToApiCart();
             });
         });
     };
+
+    /**
+     * Обращение к заглушке к addToBasket
+     */
+    addToApiCart() {
+        fetch(
+            'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/addToBasket.json',
+            {
+                method: 'GET',
+                headers: {}
+            }
+        ).then(res => {
+            return res.json();
+        }).then(res => {
+            console.log(res);
+        }).catch(err => {
+            console.log(err);
+        });
+    };
+
 
     /**
      * Метод отрисовки блоков товаров меню корзины.
@@ -173,31 +197,42 @@ class ModifyCart {
     /**
      * Метод расчета суммы товаров в меню корзины
      */
-    goodsSum() {
-        let total = 0;
-        document.querySelector('.cart-contain-box__items').querySelectorAll('.cart-product__info__price > span').forEach((price) => {
-            total += parseInt(price.innerText);
-            document.getElementById('cart-total').innerHTML = ('$' + total);
-
-            // При добавлении товара цепляем к крестику метод удаления товара и передаем сумму товаров
-            // для редактирования при удалении.
-            this.cartItemRemove(total);
-        });
-
+    goodsSum(orderProductPrice) {
+        this.total += parseInt(orderProductPrice);
+        document.getElementById('cart-total').innerHTML = ('$' + this.total);
+        this.cartItemRemove();
     };
 
     /**
      * Метон удаления товара из меню корзины
-     * @param total Сумма товаров
      */
-    cartItemRemove(total) {
-        document.querySelector('.cart-contain-box__items').querySelectorAll('.cart-product__delete > i').forEach( function (element) {
-            element.addEventListener('click', function (event) {
+    cartItemRemove() {
+        document.querySelector('.cart-contain-box__items').querySelectorAll('.cart-product__delete > i').forEach( (element) => {
+            element.addEventListener('click', (event) => {
                 let delButton = event.currentTarget;
-                total -= parseInt(delButton.parentNode.parentNode.querySelector('.cart-product__info__price > span').innerText);
-                document.getElementById('cart-total').innerHTML = ('$' + total);
+                this.total -= parseInt(delButton.parentNode.parentNode.querySelector('.cart-product__info__price > span').innerText);
+                document.getElementById('cart-total').innerHTML = ('$' + this.total);
                 delButton.parentNode.parentNode.remove();
+                this.removeFromApiCart();
             });
+        });
+    };
+    /**
+     * Обращение к заглушке к deleteFromBasket
+     */
+    removeFromApiCart() {
+        fetch(
+            'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/deleteFromBasket.json',
+            {
+                method: 'GET',
+                headers: {}
+            }
+        ).then(res => {
+            return res.json();
+        }).then(res => {
+            console.log(res);
+        }).catch(err => {
+            console.log(err);
         });
     };
 }
@@ -233,44 +268,116 @@ const showCart = new CartViewHide();
 showCart.cartView();
 showCart.cartHide();
 
-
-/*  В Методичке куча неиспользуемых и не представленных на уроке XML запросов:
-    if (window.ActiveXObject) {
-    new ActiveXObject("Microsoft.XMLHTTP");
-    К тому же там var использован.
-    Я загрузил и посмотрел ответ в консоли, в итоге я сделал вот этот код по аналогии с промисами.
-    Похоже работает, но возможно я что-о неверно сделал.
-    Буду благодарен за поправки и советы.
-*/
-let errorCounter = 0;
-const makeGETRequest = (url) => {
-    fetch(
-        url,
-        {
-            method: 'GET',
-            headers: {}
-        }
-    ).then(res => {
-        return res.json();
-    }).then(res => {
-        errorCounter = 0;
-        console.log(res);
-    }).catch(error => {
-        setTimeout(
-            () => {
-                if (errorCounter < 4)
-                {
-                    makeGETRequest(url);
-                    errorCounter++;
-                } else {
-                    return(alert(`Превышен лимит ошибок ${error}`));
-                }
-            },
-            2000
-        );
-    });
-}
 const api_url = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
-//Специально стерта последняя буква для проверки .catch с таймером
-makeGETRequest(`${api_url}/AddToBaske.json`);
+function makeGETRequest(url) {
+    return  new Promise((resolve) => {
+        let xhr;
+
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                resolve(xhr.responseText);
+            }
+        }
+        xhr.open('GET', url, true);
+        xhr.send()
+    });
+}
+
+let promise = makeGETRequest(`${api_url}/deleteFromBasket.json`);
+promise.then(res => {
+    return JSON.parse(res)
+}).then(res =>{
+    console.log(res);
+}).catch(err => {
+    console.log(err);
+});
+
+//Регулярные выражения 1-ая часть ДЗ
+let str = document.querySelector('.regex-test').innerText;
+let replace = function (testObject) {
+    if (/(?<=\W)'|'(?=\W)/gm.test(testObject)) {
+       return testObject.replace(/(?<=\W)'|'(?=\W)/gm, '"');
+    }
+}
+document.querySelector('.regex-test').innerText = replace(str);
+
+class Search {
+    constructor() {
+        this.product_name = '';
+        this.searchBar = document.querySelector('.search_bar');
+    }
+
+    getSearchText() {
+        setTimeout(
+            () => {
+                this.searchBar.addEventListener('change', () =>{
+                        this.product_name = this.searchBar.value;
+                        this.changeItemsView();
+            },
+            1000
+                );
+            });
+    };
+
+    changeItemsView() {
+        let allGoods = document.querySelectorAll('.featured-items');
+        allGoods.forEach((element) => {
+            let orderProductName = element.querySelector('.featured-item-text > p').innerText;
+            if (orderProductName.toUpperCase() === this.product_name.toUpperCase()) {
+                element.style.display = 'flex';
+            } else if (this.product_name === "") {
+                element.style.display = 'flex';
+            } else {
+                element.style.display = 'none';
+            }
+        });
+        this.getSearchText();
+    };
+}
+
+const startSearching = new Search();
+startSearching.getSearchText();
+
+function validateContactForm() {
+    let name = document.getElementById('name');
+    if(name.value.length === 0 || !name.value.match(/[А-Яа-я]/)) {
+        document.querySelector('.wrong_name').style.display = 'flex';
+        name.style.borderColor = 'red';
+        return false;
+    }  else {
+        document.querySelector('.wrong_name').style.display = 'none';
+        name.style.borderColor = 'grey'
+    }
+
+    let phone = document.getElementById('tel');
+    if(phone.value.length === 0 || phone.value.length > 15 || !phone.value.match(/\+7\(\d{3}\)\d{3}-\d{4}/g)) {
+        document.querySelector('.wrong_tel').style.display = 'flex';
+        phone.style.borderColor = 'red';
+        return false;
+    } else {
+        document.querySelector('.wrong_tel').style.display = 'none';
+        phone.style.borderColor = 'grey'
+    }
+
+    let email = document.getElementById('emailforcontact');
+    if(email.value.length === 0 || !email.value.match(/[A-Za-z]+(@mail.ru)/g) || !email.value.match(/[A-Za-z]+\.[A-Za-z]+(@mail.ru)/g) || !email.value.match(/[A-Za-z]+-[A-Za-z]+(@mail.ru)/g)) {
+        document.querySelector('.wrong_email').style.display = 'flex';
+        email.style.borderColor = 'red';
+        return false;
+    } else {
+        document.querySelector('.wrong_email').style.display = 'none';
+        phone.style.borderColor = 'grey'
+    }
+    return true;
+}
+document.querySelector('.contact_box').setAttribute('onsubmit',"return validateContactForm()");
+
+//У меня похоже мозг плавится. Я не могу понять почему email не проходит проверку, ведь я проверял регулярки через regex101, там все работает.
+//Прошу подсказать где я туплю. Благодарю
