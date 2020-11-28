@@ -381,3 +381,39 @@
     letter-spacing: 0.35px;
     line-height: 24px;
 }
+
+
+#name, #tel, #emailforcontact, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+button[type=submit] {
+    width: 212px;
+    height: 48px;
+    background-color: $mainColor;
+    color: #ffffff;
+    line-height: 48px;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: none;
+}
+
+button[type=submit]:hover {
+    background-color: $mainBackColor;
+    color: $mainColor;
+    outline: 3px solid $mainColor;
+}
+
+.wrong_name, .wrong_email, .wrong_tel {
+    display: none;
+    padding-bottom: 5px;
+    color: red;
+}

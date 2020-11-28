@@ -27,10 +27,11 @@
                     name="menu"
                     class="checkbox01"
                   />
-                  <label for="check01"
-                    ><div class="search__browse">
-                      Browse<i class="fas fa-caret-down fas1"></i></div
-                  ></label>
+                  <label for="check01">
+                    <span class="search__browse">
+                      Browse<i class="fas fa-caret-down fas1"></i>
+                    </span>
+                  </label>
                   <div class="dropdown-content">
                     <div class="arrow-up"></div>
                     <h6>WOMEN</h6>
@@ -57,6 +58,7 @@
                 <input
                   type="text"
                   name="search"
+                  class="search_bar"
                   placeholder="Search for Item..."
                 />
                 <button><i class="fas fa-search"></i></button>
@@ -335,6 +337,26 @@
             </div>
           </div>
         </div>
+        <div class="container">
+          <form action="" class="contact_box">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя и фамилия.." required>
+            <span class="wrong_name">Вы ввели неверное имя, должны быть только русские буквы, не может быть пустого поля</span>
+
+            <label for="tel">Телефон</label>
+            <input type="text" id="tel" name="telephone" placeholder="Ваш контактный телефон в формате +7(000)000-0000.." required>
+            <span class="wrong_tel">Вы ввели неверный телефон, формат: <b>+7(000)000-0000</b></span>
+
+            <label for="emailforcontact">Электронная почта</label>
+            <input type="email" id="emailforcontact" name="email" placeholder="Ваша электронная почта.." required>
+            <span class="wrong_email">Вы ввели неверную электронную почту, формат: &nbsp;<b>mymail@mail.ru</b>, или&nbsp; <b>my.mail@mail.ru</b>, или&nbsp; <b>my-mail@mail.ru</b>.</span>
+
+            <label for="subject">Ваше сообщение..</label>
+            <textarea id="subject" name="subject" placeholder="Напишите сообщение.."></textarea>
+
+            <button type="submit" class="submit_button">Отправить</button>
+          </form>
+        </div>
       </main>
       <footer>
         <div class="sub-content">
@@ -391,11 +413,9 @@
               <p>Bran<span>d</span></p></a
             >
             <div class="bot-text-l">
-              <p>
-                Objectively transition extensive data rather than cross
-                functional solutions. Monotonectally syndicate multidisciplinary
-                materials before go forward benefits. Intrinsicly syndicate an
-                expanded array of processes and cross-unit partnerships.
+              <p class="regex-test">
+                Candiru: prickleback, tope. North American  ghost pipefish flashlight fish knifefish green swordtail. 'Trout-perch cownose ray sleeper whiff', aren't 'walleye pollock skate catalufa hawkfish yellow-and-black triplefin northern lampfish,' roughy swamp-eel candlefish.' Sacramento splittail popeye catafula steelhead tuna bigeye emperor bream porgy mudminnow ground shark ronquil lungfish harelip sucker boafish halfbeak, driftfish. Catla climbing gourami, zingel hake. Trevally wrasse, 'velvet-belly shark eagle ray?', don't, isn't
+
               </p>
               <p>
                 Efficiently plagiarize 24/365 action items and focused
