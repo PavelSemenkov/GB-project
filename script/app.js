@@ -312,6 +312,12 @@ class Search {
     constructor() {
         this.product_name = '';
         this.searchBar = document.querySelector('.search_bar');
+        this.searchButton = document.querySelector('.header__search > button')
+    }
+
+    init() {
+        this.getSearchText();
+        this.goToItemsList();
     }
 
     getSearchText() {
@@ -325,6 +331,13 @@ class Search {
             1000
         );
     };
+
+    goToItemsList() {
+        this.searchButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('.featured-items-box').scrollIntoView({block: "center", behavior: "smooth"});
+        })
+    }
 
     changeItemsView() {
         let allGoods = document.querySelectorAll('.featured-items');
@@ -343,7 +356,7 @@ class Search {
 }
 
 const startSearching = new Search();
-startSearching.getSearchText();
+startSearching.init();
 
 function validateContactForm() {
     let name = document.getElementById('name');
