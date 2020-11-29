@@ -320,10 +320,10 @@ class Search {
                 this.searchBar.addEventListener('change', () =>{
                         this.product_name = this.searchBar.value;
                         this.changeItemsView();
+                        });
             },
             1000
-                );
-            });
+        );
     };
 
     changeItemsView() {
@@ -367,7 +367,7 @@ function validateContactForm() {
     }
 
     let email = document.getElementById('emailforcontact');
-    if(email.value.length === 0 || !email.value.match(/[A-Za-z]+(@mail.ru)/g) || !email.value.match(/[A-Za-z]+\.[A-Za-z]+(@mail.ru)/g) || !email.value.match(/[A-Za-z]+-[A-Za-z]+(@mail.ru)/g)) {
+    if(email.value.length === 0 || !email.value.match(/[A-Za-z]+@mail.ru/g) && !email.value.match(/[A-Za-z]+\.[A-Za-z]+@mail.ru/g) && !email.value.match(/[A-Za-z]+-[A-Za-z]+@mail.ru/g)) {
         document.querySelector('.wrong_email').style.display = 'flex';
         email.style.borderColor = 'red';
         return false;
