@@ -22,9 +22,6 @@
     <select />
   </component>
   <component name="ChangeListManager">
-<<<<<<<
-    <list default="true" id="1a1add88-bc29-4c19-96fa-5871c7afd800" name="Default Changelist" comment="added single_page.html, shopping_cart.html" />
-=======
     <list default="true" id="1a1add88-bc29-4c19-96fa-5871c7afd800" name="Default Changelist" comment="added single_page.html, shopping_cart.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/scss/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/scss/_index.scss" afterDir="false" />
@@ -33,7 +30,6 @@
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/app.js" afterDir="false" />
     </list>
->>>>>>>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

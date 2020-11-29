@@ -15,7 +15,7 @@
       <header>
         <div class="top">
           <div class="header container">
-            <div class="header__left">
+            <div class="header__left" id="root">
               <a href="index.html" class="header__logo"
                 ><img src="img/logo.png" alt="logo" />
                 <p>Bran<span>d</span></p></a
@@ -64,6 +64,8 @@
                 />
                 <button><i class="fas fa-search"></i></button>
               </form>
+              <span @click="getData">get Data</span>
+              <div v-for="(item, id) in itemms" :key="`product_${id}`">{{item.product_name}} {{item.price}}</div>
             </div>
             <div class="header__right">
               <div class="cart-box-dropdown">
@@ -104,9 +106,7 @@
                 </div>
               </div>
               <a href="shopping_cart.html" class="cart"><img src="img/cart.png" alt="cart" /></a>
-              <a href="#" class="my_account_box"
-                >My Account <i class="fas fa-caret-down fas2"></i
-              ></a>
+              <a href="#" class="my_account_box">My Account <i class="fas fa-caret-down fas2"></i></a>
             </div>
           </div>
         </div>
