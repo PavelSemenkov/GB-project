@@ -18,8 +18,7 @@
             <div class="header__left" id="root">
               <a href="index.html" class="header__logo"
                 ><img src="img/logo.png" alt="logo" />
-                <p>Bran<span>d</span></p></a
-              >
+                <p>Bran<span>d</span></p></a>
               <form method="get" class="header__search">
                 <div class="dropdown">
                   <input
@@ -61,36 +60,18 @@
                   name="search"
                   class="search_bar"
                   placeholder="Search for Item..."
+                  v-model="searchLine"
                 />
-                <button><i class="fas fa-search"></i></button>
+                <button @click="filteredGoods"><i class="fas fa-search"></i></button>
               </form>
-              <span @click="getData">get Data</span>
-              <div v-for="(item, id) in itemms" :key="`product_${id}`">{{item.product_name}} {{item.price}}</div>
+<!--              <span @click="getData">get Data</span>-->
+<!--              <div v-for="(item, id) in itemms" :key="`product_${id}`">{{item.product_name}} {{item.price}}</div>-->
             </div>
             <div class="header__right">
               <div class="cart-box-dropdown">
                 <div class="cart-box">
                   <div class="cart-contain-box">
                     <div class="cart-contain-box__items">
-                      <!--
-                      <div class="cart-product">
-                        <div class="cart-product__image"></div>
-                        <div class="cart-product__info">
-                          <div class="cart-product__info__name">Shirt</div>
-                          <div class="cart-product__info__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                          <div class="cart-product__info__price">$50</div>
-                        </div>
-                        <div class="cart-product__delete">
-                          <i class="fas fa-times-circle"></i>
-                        </div>
-                      </div>
-                      -->
                     </div>
                     <div class="cart-contain-box__total">
                       <div>TOTAL</div>
@@ -486,7 +467,8 @@
         </div>
       </footer>
     </div>
-    <script src="script/app.js"></script>
     <script src="script/vuetest.js"></script>
+    <script src="script/app.js"></script>
+
   </body>
 </html>

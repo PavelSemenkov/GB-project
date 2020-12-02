@@ -308,55 +308,55 @@ let replace = function (testObject) {
 }
 document.querySelector('.regex-test').innerText = replace(str);
 
-class Search {
-    constructor() {
-        this.product_name = '';
-        this.searchBar = document.querySelector('.search_bar');
-        this.searchButton = document.querySelector('.header__search > button')
-    }
-
-    init() {
-        this.getSearchText();
-        this.goToItemsList();
-    }
-
-    getSearchText() {
-        setTimeout(
-            () => {
-                this.searchBar.addEventListener('change', () =>{
-                        this.product_name = this.searchBar.value;
-                        this.changeItemsView();
-                        });
-            },
-            1000
-        );
-    };
-
-    goToItemsList() {
-        this.searchButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            document.querySelector('.featured-items-box').scrollIntoView({block: "center", behavior: "smooth"});
-        })
-    }
-
-    changeItemsView() {
-        let allGoods = document.querySelectorAll('.featured-items');
-        allGoods.forEach((element) => {
-            let orderProductName = element.querySelector('.featured-item-text > p').innerText;
-            if (orderProductName.toUpperCase() === this.product_name.toUpperCase()) {
-                element.style.display = 'flex';
-            } else if (this.product_name === "") {
-                element.style.display = 'flex';
-            } else {
-                element.style.display = 'none';
-            }
-        });
-        this.getSearchText();
-    };
-}
-
-const startSearching = new Search();
-startSearching.init();
+// class Search {
+//     constructor() {
+//         this.product_name = '';
+//         this.searchBar = document.querySelector('.search_bar');
+//         this.searchButton = document.querySelector('.header__search > button')
+//     }
+//
+//     init() {
+//         this.getSearchText();
+//         this.goToItemsList();
+//     }
+//
+//     getSearchText() {
+//         setTimeout(
+//             () => {
+//                 this.searchBar.addEventListener('change', () =>{
+//                         this.product_name = this.searchBar.value;
+//                         this.changeItemsView();
+//                         });
+//             },
+//             1000
+//         );
+//     };
+//
+//     goToItemsList() {
+//         this.searchButton.addEventListener('click', (event) => {
+//             event.preventDefault();
+//             document.querySelector('.featured-items-box').scrollIntoView({block: "center", behavior: "smooth"});
+//         })
+//     }
+//
+//     changeItemsView() {
+//         let allGoods = document.querySelectorAll('.featured-items');
+//         allGoods.forEach((element) => {
+//             let orderProductName = element.querySelector('.featured-item-text > p').innerText;
+//             if (orderProductName.toUpperCase() === this.product_name.toUpperCase()) {
+//                 element.style.display = 'flex';
+//             } else if (this.product_name === "") {
+//                 element.style.display = 'flex';
+//             } else {
+//                 element.style.display = 'none';
+//             }
+//         });
+//         this.getSearchText();
+//     };
+// }
+//
+// const startSearching = new Search();
+// startSearching.init();
 
 function validateContactForm() {
     let name = document.getElementById('name');

@@ -2,31 +2,30 @@
 const app = new Vue({
     el: '#root',
     data: {
-        name: ''
+        searchLine: '',
     },
     computed: {
-        title(){
-            return 'Hello!' + this.name;
-        }
     },
     methods: {
-        clear(event){
-            this.name = '';
-        },
-        getData(){
-            fetch(
-                "https://raw.githubusercontent.com/PavelSemenkov/GB-project/JS2Lesson03/response/products.json",
-                {
-                    method: 'GET',
-                    headers: {},
-                    // body: ''
-                }
-            ).then(res => res.json()).then(res => {
-                    this.itemms = res;
+        filteredGoods(event) {
+            let allGoods = document.querySelectorAll('.featured-items');
+            event.preventDefault();
+            allGoods.forEach((element) => {
+                    let orderProductName = element.querySelector('.featured-item-text > p').innerText;
+                    if (orderProductName.toUpperCase().includes(this.searchLine.toUpperCase())) {
+                        document.querySelector('.featured-items-box').scrollIntoView({
+                            block: "center",
+                            behavior: "smooth"
+                        });
+                        element.style.display = 'flex';
+                    } else if (this.searchLine === "") {
+                        element.style.display = 'flex';
+                    } else {
+                        element.style.display = 'none';
+                    }
             });
         }
     }
 });
 
-console.log(app);
 
