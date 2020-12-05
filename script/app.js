@@ -302,9 +302,7 @@ promise.then(res => {
 //Регулярные выражения 1-ая часть ДЗ
 let str = document.querySelector('.regex-test').innerText;
 let replace = function (testObject) {
-    if (/(?<=\W)'|'(?=\W)/gm.test(testObject)) {
        return testObject.replace(/(?<=\W)'|'(?=\W)/gm, '"');
-    }
 }
 document.querySelector('.regex-test').innerText = replace(str);
 
