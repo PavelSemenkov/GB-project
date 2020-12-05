@@ -65,26 +65,26 @@ const indexApp = document.querySelector('.featured-items-box');
 /**
  * Функция парсера из json файла заместо массива arrGoods
  */
-const jsonProductParse = () => {
-    fetch(
-        "https://raw.githubusercontent.com/PavelSemenkov/GB-project/JS2Lesson03/response/products.json",
-        {
-            method: 'GET',
-            headers: {},
-            // body: ''
-        }
-    ).then(res => {
-        return res.json();
-    }).then(res => {
-        for (let i of res) {
-            const item = new Goods(i.product_name, i.price, i.product_size, i.product_color, i.product_photo_src, i.id_product);
-            indexApp.innerHTML += item.render();
-        }
-        modifyCartIndex.addToCart();
-    });
-};
-
-jsonProductParse();
+// const jsonProductParse = () => {
+//     fetch(
+//         "https://raw.githubusercontent.com/PavelSemenkov/GB-project/JS2Lesson03/response/products.json",
+//         {
+//             method: 'GET',
+//             headers: {},
+//             // body: ''
+//         }
+//     ).then(res => {
+//         return res.json();
+//     }).then(res => {
+//         for (let i of res) {
+//             const item = new Goods(i.product_name, i.price, i.product_size, i.product_color, i.product_photo_src, i.id_product);
+//             indexApp.innerHTML += item.render();
+//         }
+//         modifyCartIndex.addToCart();
+//     });
+// };
+//
+// jsonProductParse();
 
 /**
  * Не совсем понял 2. задание второго ДЗ. Где добавить расчет суммы всех товаров, в корзине или просто в консоль вывести лог?
@@ -119,25 +119,25 @@ class ModifyCart {
     // Предполагаю, что это очень грубо сделанный метод и по факту в переменные в этом методе
     // должны передаваться данные по индексу напрямую из БД, но пока не знаю как это сделать,
     // сделал заготовку для product__${id} на будущее. Посоветуйте в правильном ли направлении думаю.
-    addToCart() {
-        document.querySelectorAll(this.goodsCard).forEach((button) => {
-            button.addEventListener('click', (event) => {
-                let button = event.currentTarget;
-                let cardMainBlock = button.parentNode.parentNode;
-                let orderProductImage = cardMainBlock.querySelector('.product-photo').src;
-                let orderProductPrice = cardMainBlock.querySelector('.index-product-price').innerText;
-                let orderProductName = cardMainBlock.querySelector('.featured-item-text > p').innerText;
-                let orderProductId = cardMainBlock.id;
-                document.querySelector('.cart-contain-box__items').innerHTML += this.renderCart(orderProductImage, orderProductPrice, orderProductName, orderProductId);
-
-                //Вызов расчета суммы при добавления товара
-                this.goodsSum(orderProductPrice);
-
-                //Запросы к апи заглушке при добавлении товара
-                this.addToApiCart();
-            });
-        });
-    };
+    // addToCart() {
+    //     document.querySelectorAll(this.goodsCard).forEach((button) => {
+    //         button.addEventListener('click', (event) => {
+    //             let button = event.currentTarget;
+    //             let cardMainBlock = button.parentNode.parentNode;
+    //             let orderProductImage = cardMainBlock.querySelector('.product-photo').src;
+    //             let orderProductPrice = cardMainBlock.querySelector('.index-product-price').innerText;
+    //             let orderProductName = cardMainBlock.querySelector('.featured-item-text > p').innerText;
+    //             let orderProductId = cardMainBlock.id;
+    //             document.querySelector('.cart-contain-box__items').innerHTML += this.renderCart(orderProductImage, orderProductPrice, orderProductName, orderProductId);
+    //
+    //             //Вызов расчета суммы при добавления товара
+    //             this.goodsSum(orderProductPrice);
+    //
+    //             //Запросы к апи заглушке при добавлении товара
+    //             this.addToApiCart();
+    //         });
+    //     });
+    // };
 
     /**
      * Обращение к заглушке к addToBasket
@@ -245,28 +245,28 @@ const modifyCartIndex = new ModifyCart('.cart-order');
 //Прошу подсказать как тут обнулить таймаут при повторном наведении мышки.
 //мучаюсь и не могу понять как указать на таймаут стрелочной функции извне, чтобы его обнулять.
 //Пробовал clearTimeout, но похоже не понимаю где точно находится таймаут, чтобы на него указать.
-class CartViewHide {
-    cartView () {
-        document.querySelector('.cart').addEventListener('mouseover', function () {
-            document.querySelector('.cart-box-dropdown').style.display = "block";
-        });
-        document.querySelector('.cart-box').addEventListener('mousemove', function () {
-            document.querySelector('.cart-box-dropdown').style.display = "block";
-        });
-    }
+// class CartViewHide {
+//     cartView () {
+//         document.querySelector('.cart').addEventListener('mouseover', function () {
+//             document.querySelector('.cart-box-dropdown').style.display = "block";
+//         });
+//         document.querySelector('.cart-box').addEventListener('mousemove', function () {
+//             document.querySelector('.cart-box-dropdown').style.display = "block";
+//         });
+//     }
+//
+//     cartHide() {
+//         document.querySelector('.cart-box-dropdown').addEventListener('mouseleave', function t() {
+//             setTimeout(() => {
+//                 this.style.display = "none";
+//             }, 2000);
+//         });
+//     };
+// }
 
-    cartHide() {
-        document.querySelector('.cart-box-dropdown').addEventListener('mouseleave', function t() {
-            setTimeout(() => {
-                this.style.display = "none";
-            }, 2000);
-        });
-    };
-}
-
-const showCart = new CartViewHide();
-showCart.cartView();
-showCart.cartHide();
+// const showCart = new CartViewHide();
+// showCart.cartView();
+// showCart.cartHide();
 
 const api_url = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
