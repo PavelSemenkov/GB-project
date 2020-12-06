@@ -12,7 +12,6 @@
   </head>
   <body>
     <div class="site">
-      <header-main></header-main>
       <header>
         <div class="top">
           <div class="header container">
@@ -20,7 +19,7 @@
               <a href="index.html" class="header__logo"
                 ><img src="img/logo.png" alt="logo" />
                 <p>Bran<span>d</span></p></a>
-              <form method="get" class="header__search">
+              <div class="header__search">
                 <div class="dropdown">
                   <input
                     id="check01"
@@ -56,61 +55,12 @@
                     <a href="#">Jackets/vests</a>
                   </div>
                 </div>
-                <input
-                  type="text"
-                  name="search"
-                  class="search_bar"
-                  placeholder="Search for Item..."
-                  v-model="searchLine"
-                />
-                <button @click="filteredGoods"><i class="fas fa-search"></i></button>
-              </form>
+                <main-page/>
+              </div>
             </div>
             <div class="header__right" id="menucart">
-              <div class="cart-box-dropdown" @mouseover="isVisibleCart">
-                <div class="cart-box" @mouseleave="isHidingCart">
-                  <div class="cart-contain-box">
-                    <div class="cart-contain-box__items">
-                      <span v-if="cartRender()">Нет данных</span>
-                      <div class="cart-product" v-for="(item) in listRender">
-                        <div class="cart-product__image">
-                          <img :src="item.product_photo_src" alt="product"/>
-                        </div>
-                        <div class="cart-product__info">
-                          <div class="cart-product__info__name">
-                            {{item.product_name}}
-                          </div>
-                          <div class="cart-product__info__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                          <div class="cart-product__info__price">
-                            $ <span>{{item.price}}</span>
-                          </div>
-                        </div>
-                        <div class="cart-product__delete">
-                          <i class="fas fa-times-circle" @click="removeItem"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cart-contain-box__total">
-                      <div>TOTAL</div>
-                      <span id="cart-total"></span>
-                    </div>
-                    <button class="cart-contain-box__button-checkout">
-                      Checkout
-                    </button>
-                    <button class="cart-contain-box__button-go-to-cart">
-                      Go to cart
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <a href="shopping_cart.html" class="cart"><img src="img/cart.png" alt="cart" @mouseover="isVisibleCart"/></a>
-              <a href="#" class="my_account_box">My Account <i class="fas fa-caret-down fas2"></i></a>
+              <basket-box/>
+
             </div>
           </div>
         </div>
@@ -296,31 +246,8 @@
           Featured Items
           <p>Shop for items based on what we featured in this week</p>
         </div>
-        <div class="featured-items-box container" id="catalogue">
-          <div class="featured-items" v-for="(item, id) in items"
-               :key="`product_${id}`">
-            <img
-                    :src="item.product_photo_src"
-                    alt="product"
-                    class="product-photo"
-            />
-            <div class="layers">
-              <div class="hover-layer">
-                <img src="img/dark_layer.png" alt="hover" />
-              </div>
-              <a class="cart-order" @click="addToCart">
-                <div class="">
-                  <img src="img/cart.svg" alt="cart" />
-                </div>
-                <p>Add to cart</p>
-              </a>
-              <div class="white-layer"></div>
-            </div>
-            <div class="featured-item-text">
-              <p>{{item.product_name}}</p>
-              <h6>$<span class="index-product-price">{{item.price}}</span></h6>
-            </div>
-          </div>
+        <div id="catalogue-box">
+          <catalogue-section/>
         </div>
         <button class="browse-all-products">
           <a href="#"

@@ -23,7 +23,13 @@
 .header__left, .header__right {
     display: flex;
     align-items: center;
-    overflow: hidden
+    overflow: hidden;
+}
+
+.header__right > div {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
 .header__logo {
@@ -61,7 +67,17 @@
     height: 38px;
 }
 
-.header__search input {
+.header__search > label {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 400px;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    height: 38px;
+}
+
+.header__search > label > input {
     height: inherit;
     outline: none;
     overflow: hidden;
@@ -73,7 +89,7 @@
 
 }
 
-.header__search input::placeholder {
+.header__search > label > input::placeholder {
     color: #a4a4a4;
     font-size: 14px;
     font-weight: 300;
