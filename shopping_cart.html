@@ -5,18 +5,30 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="css/scss/style.css">
     <script src="https://kit.fontawesome.com/2c1f09cccd.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 <body>
 <div class="site">
     <header>
         <div class="top">
             <div class="header container">
-                <div class="header__left">
-                    <a href="index.html" class="header__logo"><img src="img/logo.png" alt="logo"><p>Bran<span>d</span></p></a>
-                    <form method="get" class="header__search">
+                <div class="header__left" id="root">
+                    <a href="index.html" class="header__logo">
+                        BRAN<span>D</span>
+                    </a>
+                    <div class="header__search">
                         <div class="dropdown">
-                            <input id="check01" type="checkbox" name="menu" class="checkbox01">
-                            <label for="check01"><div class="search__browse">Browse<i class="fas fa-caret-down fas1"></i></div></label>
+                            <input
+                                    id="check01"
+                                    type="checkbox"
+                                    name="menu"
+                                    class="checkbox01"
+                            />
+                            <label for="check01">
+                    <span class="search__browse">
+                      Browse<i class="fas fa-caret-down fas1"></i>
+                    </span>
+                            </label>
                             <div class="dropdown-content">
                                 <div class="arrow-up"></div>
                                 <h6>WOMEN</h6>
@@ -40,21 +52,19 @@
                                 <a href="#">Jackets/vests</a>
                             </div>
                         </div>
-                        <input type="text" name="search" placeholder="Search for Item...">
-                        <button><i class="fas fa-search"></i></button>
-                    </form>
+                        <main-page/>
+                    </div>
                 </div>
-                <div class="header__right">
-                    <a href="#" class="cart"><img src="img/cart.png" alt="cart"></a>
-                    <a href="#" class="my_account_box">My Account <i class="fas fa-caret-down fas2"></i></a>
+                <div class="header__right" id="menucart">
+                    <basket-box/>
                 </div>
             </div>
         </div>
         <div class="top-nav">
             <div class="container">
-                <ul class="menu-list">
-                    <li class="menu-item"><a href="index.html">Home </a></li>
-                    <li class="menu-item"><a href="#">Man</a></li>
+                <div class="menu-list">
+                    <div class="menu-item"><a href="index.html">Home </a></div>
+                    <div class="menu-item"><a href="#">Man</a></div>
                     <div class="top-nav-mega-menu">
                         <div class="top-nav-mega-menu__box">
                             <h6>Man</h6>
@@ -91,12 +101,13 @@
                             <a href="#">Jackets/Coats</a>
                             <div class="top-nav-mega-menu__img">
                     <span>
-                    SUPER <br> SALE!
+                      SUPER <br />
+                      SALE!
                     </span>
                             </div>
                         </div>
                     </div>
-                    <li class="menu-item"><a href="#">Women</a></li>
+                    <div class="menu-item"><a href="#">Women</a></div>
                     <div class="top-nav-mega-menu">
                         <div class="top-nav-mega-menu__box">
                             <h6>Women</h6>
@@ -133,12 +144,13 @@
                             <a href="#">Jackets/Coats</a>
                             <div class="top-nav-mega-menu__img">
                     <span>
-                    SUPER <br> SALE!
+                      SUPER <br />
+                      SALE!
                     </span>
                             </div>
                         </div>
                     </div>
-                    <li class="menu-item"><a href="#">Kids</a></li>
+                    <div class="menu-item"><a href="#">Kids</a></div>
                     <div class="top-nav-mega-menu">
                         <div class="top-nav-mega-menu__box">
                             <h6>KIDS</h6>
@@ -175,15 +187,16 @@
                             <a href="#">Jackets/Coats</a>
                             <div class="top-nav-mega-menu__img">
                     <span>
-                    SUPER <br> SALE!
+                      SUPER <br />
+                      SALE!
                     </span>
                             </div>
                         </div>
                     </div>
-                    <li class="menu-item"><a href="#">Accessories</a></li>
-                    <li class="menu-item"><a href="#">Featured</a></li>
-                    <li class="menu-item"><a href="#">Hot Deals</a></li>
-                </ul>
+                    <div class="menu-item"><a href="#">Accessories</a></div>
+                    <div class="menu-item"><a href="#">Featured</a></div>
+                    <div class="menu-item"><a href="#">Hot Deals</a></div>
+                </div>
             </div>
         </div>
     </header>
@@ -593,19 +606,27 @@
             <div class="subscribe-box">
                 <div class="container">
                     <div class="subscribe-left-box">
-                        <img src="img/subscribe-left-box-mg.png" alt="person">
+                        <img src="img/subscribe-left-box-mg.png" alt="person" />
                         <div class="subs-left-box-text">
-                            <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
-                                a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                            <p>
+                                “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                                pulvinar purus condimentum a. Aliquam condimentum mattis
+                                neque sed pretium”
                             </p>
                             <div class="">
                                 <h5>Bin Burhan</h5>
                                 <h6>Dhaka, Bd</h6>
                             </div>
                             <div>
-                                <a href="#" class=""><img src="img/subs_box_rect.svg" alt="sub_scroll"></a>
-                                <a href="#" class=""><img src="img/subs_box_rect.svg" alt="sub_scroll"></a>
-                                <a href="#" class=""><img src="img/subs_box_rect.svg" alt="sub_scroll"></a>
+                                <a href="#" class=""
+                                ><img src="img/subs_box_rect.svg" alt="sub_scroll"
+                                /></a>
+                                <a href="#" class=""
+                                ><img src="img/subs_box_rect.svg" alt="sub_scroll"
+                                /></a>
+                                <a href="#" class=""
+                                ><img src="img/subs_box_rect.svg" alt="sub_scroll"
+                                /></a>
                             </div>
                         </div>
                     </div>
@@ -614,8 +635,14 @@
                             <h2>Subscribe</h2>
                             <p>FOR OUR NEWLETTER AND PROMOTION</p>
                             <form method="get" class="subscribe-mail">
-                                <input type="email" name="enter email" placeholder="Enter Your Email">
-                                <button class="subscribe-button"><span>Subscribe </span></button>
+                                <input
+                                        type="email"
+                                        name="enter email"
+                                        placeholder="Enter Your Email"
+                                />
+                                <button class="subscribe-button">
+                                    <span>Subscribe </span>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -624,62 +651,84 @@
         </div>
         <div class="bot-menu container">
             <div class="bot-logo">
-                <a href="index.html" class="header__logo"><img src="img/logo.png" alt="logo"><p>Bran<span>d</span></p></a>
+                <a href="index.html" class="header__logo">
+                    BRAN<span>D</span>
+                </a>
                 <div class="bot-text-l">
-                    <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p>
-                    <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+                    <p class="regex-test">
+                        Candiru: prickleback, tope. 'Trout-perch cownose ray sleeper whiff', aren't 'walleye lampfish,' candlefish.' lungfish harelip sucker boafish halfbeak, driftfish. 'velvet-belly shark eagle ray?', don't, isn't
+                    </p>
+                    <p>
+                        Efficiently plagiarize 24/365 action items and focused
+                        infomediaries. Distinctively seize superior initiatives for
+                        wireless technologies. Dynamically optimize.
+                    </p>
                 </div>
             </div>
-            <div class="bot-company">
-                <div class="bot-h1">Company</div>
-                <div class="bot-company-list">
-                    <ul class="">
-                        <li class=""><a href="#">Home</a></li>
-                        <li class=""><a href="#">Shop</a></li>
-                        <li class=""><a href="#">About</a></li>
-                        <li class=""><a href="#">How It Works</a></li>
-                        <li class=""><a href="#">Contact</a></li>
-                    </ul>
+            <div class="contacts">
+                <div class="bot-company">
+                    <div class="bot-h1">Company</div>
+                    <div class="bot-company-list">
+                        <ul class="">
+                            <li class=""><a href="#">Home</a></li>
+                            <li class=""><a href="#">Shop</a></li>
+                            <li class=""><a href="#">About</a></li>
+                            <li class=""><a href="#">How It Works</a></li>
+                            <li class=""><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="bot-information">
-                <div class="bot-h1">Information</div>
-                <div class="bot-company-list">
-                    <ul class="">
-                        <li class=""><a href="#">Tearms & Condition</a></li>
-                        <li class=""><a href="#">Privacy Policy</a></li>
-                        <li class=""><a href="#">How to Buy</a></li>
-                        <li class=""><a href="#">How to Sell</a></li>
-                        <li class=""><a href="#">Promotion</a></li>
-                    </ul>
+                <div class="bot-information">
+                    <div class="bot-h1">Information</div>
+                    <div class="bot-company-list">
+                        <ul class="">
+                            <li class=""><a href="#">Tearms & Condition</a></li>
+                            <li class=""><a href="#">Privacy Policy</a></li>
+                            <li class=""><a href="#">How to Buy</a></li>
+                            <li class=""><a href="#">How to Sell</a></li>
+                            <li class=""><a href="#">Promotion</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="bot-shopc">
-                <div class="bot-h1">Shop Category</div>
-                <div class="bot-company-list">
-                    <ul class="">
-                        <li class=""><a href="#">Men</a></li>
-                        <li class=""><a href="#">Women</a></li>
-                        <li class=""><a href="#">Child</a></li>
-                        <li class=""><a href="#">Apparel</a></li>
-                        <li class=""><a href="#">Brows All</a></li>
-                    </ul>
+                <div class="bot-shopc">
+                    <div class="bot-h1">Shop Category</div>
+                    <div class="bot-company-list">
+                        <ul class="">
+                            <li class=""><a href="#">Men</a></li>
+                            <li class=""><a href="#">Women</a></li>
+                            <li class=""><a href="#">Child</a></li>
+                            <li class=""><a href="#">Apparel</a></li>
+                            <li class=""><a href="#">Brows All</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="footer">
             <div class="container">
-                <div class="copyright">&copy; 2017  Brand  All Rights Reserved.</div>
+                <div class="copyright">&copy; 2020 Brand All Rights Reserved.</div>
                 <div class="socials">
-                    <div class="social-list"><a href="#"><i class="fab fa-facebook-square"></i></a></div>
-                    <div class="social-list"><a href="#"><i class="fab fa-twitter-square"></i></a></div>
-                    <div class="social-list"><a href="#"><i class="fab fa-linkedin"></i></a></div>
-                    <div class="social-list"><a href="#"><i class="fab fa-pinterest-square"></i></a></div>
-                    <div class="social-list"><a href="#"><i class="fab fa-google-plus-square"></i></a></div>
+                    <div class="social-list">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    </div>
+                    <div class="social-list">
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                    <div class="social-list">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="social-list">
+                        <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                    </div>
+                    <div class="social-list">
+                        <a href="#"><i class="fab fa-google-plus-square"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 </div>
+<script src="script/vuetest.js"></script>
+<script src="script/app.js"></script>
 </body>
 </html>

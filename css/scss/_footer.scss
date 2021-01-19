@@ -1,28 +1,30 @@
-
 .sub-content{
     background-color: #f2f2f2;
 }
+
 .subscribe-box {
     min-height: 438px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 97px;
-    background-image: url("../../img/subscribe-box-bckg.png");
-    background-repeat: no-repeat;
-    background-color: #a0a0a0;
+    background: url("../../img/subscribe-box-bckg.png") no-repeat #a0a0a0;
     background-blend-mode: overlay;
     background-size: cover;
     background-position-y: bottom;
 }
 
-.subscribe-box > div {
+.subscribe-box .container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .subscribe-left-box {
-    min-width: 570px;
+    width: 569px;
     height: 329px;
     border-right: 1px solid #ffffff;
-    padding-top: 111px;
+    padding-top: 125px;
     display: flex;
 }
 
@@ -86,14 +88,13 @@
 
 .subscribe-right-box {
     display: flex;
-    min-width: 570px;
+    align-items: center;
+    justify-content: center;
+    width: 569px;
     height: 438px;
 }
 
 .subs-right-box-text {
-    padding-top: 148px;
-    padding-left: 92px;
-    height: 122px;
     min-width: 386px;
     text-align: center;
 }
@@ -203,15 +204,15 @@
     margin-top: 109px;
     height: 260px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .bot-logo {
     width: 428px;
-}
-
-.bot-logo > a {
-    height: 51px;
-    width: 180px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .bot-text-l p {
@@ -234,8 +235,15 @@
     margin-bottom: 45px;
 }
 
-.bot-company {
-    margin-left: 63px;
+.contacts {
+    height: 260px;
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+}
+.bot-company,
+.bot-information,
+.bot-shopc {
     display: flex;
     flex-direction: column;
 }
@@ -260,18 +268,6 @@
 
 .bot-company-list ul li a:hover{
     color: $mainColor;
-}
-
-.bot-information {
-    margin-left: 129px;
-    display: flex;
-    flex-direction: column;
-}
-
-.bot-shopc {
-    margin-left: 79px;
-    display: flex;
-    flex-direction: column;
 }
 
 .footer {
