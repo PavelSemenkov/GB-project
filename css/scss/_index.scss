@@ -1,56 +1,54 @@
 .slider-box {
     background-color: #e8e8e8;
     max-width: 100%;
-    padding-top: 100px;
+    height: 614px;
+    padding-top: 151px;
 }
 
 .slider-top {
+    display: flex;
+    align-items: center;
     max-width: 100%;
-    height: 665px;
-    background-image: url("../../img/slider-top.png");
-    background-repeat: no-repeat;
+    height: inherit;
+    background: url("../../img/slider-top.png") no-repeat right 35px bottom;
+    background-size: 555px;
 }
 
 .slider-text {
-    display: flex;
-    padding-top: 276px;
     height: 92px;
-}
-
-.slider-text img {
-    height: 92px;
+    background: url("../../img/slider-border.png") no-repeat left center;
 }
 
 .slider-h {
-    margin-left: 12px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 22px;
     height: 92px;
-    line-height: 42px;
-}
-
-.slider-h .h1, .h3{
-    margin: 0;
-    padding: 0;
+    width: 500px;
     text-transform: uppercase;
+    color: #222222;
+    font-weight: 900;
 }
 
 .slider-h .h1 {
-    color: #222222;
-    font-weight: 900;
     font-size: 60px;
+    line-height: 45px;
     letter-spacing: 1.5px;
 }
 
 .slider-h .h3 {
-    padding-top: 12px;
-    color: #222222;
     font-size: 40px;
-    font-weight: 900;
+    line-height: 30px;
     letter-spacing: 1px;
 }
 
 .slider-h .h3 span {
+    display: inline-block;
     color: $mainColor;
-    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 30px;
+    letter-spacing: 1px;
 }
 
 .banner-box {
@@ -66,42 +64,39 @@
 .banner1 {
     width: 560px;
     height: 542px;
-    background-image: url("../../img/banner-1.png");
-    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+    background: url("../../img/banner-1.png") no-repeat;
 }
 .banner2 {
     width: 560px;
     height: 261px;
-    background-image: url("../../img/banner-3.png");
-    background-repeat: no-repeat;
-    background-position: right;
+    position: relative;
+    background: url("../../img/banner-3.png") no-repeat right;
 }
 
 .banner3 {
     width: 560px;
     height: 261px;
-    background-image: url("../../img/banner-2.png");
-    background-color: #dadad2;
-    background-repeat: no-repeat;
-    background-position: right;
+    position: relative;
+    background: url("../../img/banner-2.png") no-repeat right #dadad2;
 }
 
 .banner4 {
     width: 560px;
     height: 542px;
-    background-image: url("../../img/banner-4.png");
-    background-repeat: no-repeat;
+    position: relative;
+    background: url("../../img/banner-4.png") no-repeat;
 }
-.banner-text1 {
-    margin-top: 26px;
-    width: 175px;
-    height: 82px;
+
+.banner-text {
+    position: absolute;
+    top: 26px;
+    padding: 16px 19px;
     background-color: $mainBackColor;
 }
 
 .banner-text-style1 {
-    padding-top: 16px;
-    padding-left: 18px;
     color: #222222;
     font-size: 18px;
     line-height: 18px;
@@ -111,35 +106,12 @@
 }
 
 .banner-text-style2 {
-    padding-top: 5px;
-    padding-left: 18px;
     color: $mainColor;
     font-size: 30px;
     line-height: 30px;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.75px;
-}
-
-.banner-text3 {
-    margin-top: 26px;
-    width: 240px;
-    height: 82px;
-    background-color: #ffffff;
-}
-
-.banner-text2 {
-    margin-top: 26px;
-    width: 162px;
-    height: 82px;
-    background-color: #ffffff;
-}
-
-.banner-text4 {
-    margin-top: 26px;
-    width: 180px;
-    height: 82px;
-    background-color: #ffffff;
 }
 
 .featured-items-text {
@@ -179,6 +151,10 @@
 .product-photo {
     width: 261px;
     height: 280px;
+}
+
+.product_id {
+    display: none;
 }
 
 .layers {
@@ -243,6 +219,7 @@
 }
 
 .featured-item-text {
+    padding-right: 14px;
     padding-left: 14px;
 }
 
@@ -266,7 +243,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: auto;
+    margin: 0 auto;
     margin-top: 75px;
     width: 212px;
     height: 48px;
@@ -277,51 +254,51 @@
     cursor: pointer;
     transition: all 0.5s;
     border: none;
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 48px;
+        letter-spacing: 0.4px;
+        i {
+            padding-left: 5px;
+        }
+    }
 }
 
 .browse-all-products:hover {
     background-color: $buttonHoverColor;
 }
 
-.browse-all-products a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 48px;
-    letter-spacing: 0.4px;
-}
-
-.browse-all-products a i {
-    padding-left: 5px;
-}
-
 .offer-box {
     margin-top: 113px;
     height: 529px;
     display: flex;
-    background-color: #222224;
+    align-content: space-between;
+    flex-wrap: wrap;
 }
 
 .offer-box-left {
     position: relative;
-    min-width: 767px;
-    background-image: url("../../img/Offer_pic.png");
-    background-repeat: no-repeat;
-}
-
-.offer-box-left img {
-    position: absolute;
-    z-index: 0;
+    width: 767px;
+    height: 529px;
+    background: url("../../img/Offer_pic.png") no-repeat left top;
+    img {
+        height: 529px;
+        position: absolute;
+        object-fit: cover;
+        z-index: 0;
+    }
 }
 
 .offer-left-text-box {
-    position: absolute;
+    position: relative;
+    margin-top: 146px;
+    margin-left: 36px;
 }
 
 .offer-left-text-big {
-    padding-top: 146px;
-    padding-left: 36px;
     color: #ffffff;
     font-size: 54px;
     font-weight: 700;
@@ -336,7 +313,6 @@
 }
 
 .offer-left-text-small {
-    padding-left: 36px;
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 0.9px;
@@ -345,43 +321,48 @@
 }
 
 .offer-box-right {
-    margin-left: 32px;
-    margin-top: 48px;
-    width: 298px;
-    height: 415px;
+    width: 373px;
+    height: 529px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222224;
 }
 
-.offers-icons {
+.offers-right-box-text {
     display: flex;
-    flex-wrap: wrap;
     align-content: space-between;
-    width: 50px;
-    height: 365px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 430px;
 }
 
 .orbt {
+    position: relative;
     margin-left: 30px;
-    padding-bottom: 45px;
+    margin-right: 30px;
+    img {
+        position: absolute;
+        object-fit: cover;
+    }
+    h1 {
+        padding-left: 78px;
+        color: #fbfbfb;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+        margin: 0;
+        letter-spacing: 0.5px;
+    }
+    p {
+        padding-left: 78px;
+        color: #fbfbfb;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.35px;
+        line-height: 24px;
+    }
 }
-
-.orbt h1 {
-    color: #fbfbfb;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 20px;
-    margin: 0;
-    letter-spacing: 0.5px;
-}
-
-.orbt p {
-    color: #fbfbfb;
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 0.35px;
-    line-height: 24px;
-}
-
 
 #name, #tel, #emailforcontact, textarea {
     width: 100%;

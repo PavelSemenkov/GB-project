@@ -268,36 +268,36 @@ const modifyCartIndex = new ModifyCart('.cart-order');
 // showCart.cartView();
 // showCart.cartHide();
 
-const api_url = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
-
-function makeGETRequest(url) {
-    return  new Promise((resolve) => {
-        let xhr;
-
-        if (window.XMLHttpRequest) {
-            xhr = new XMLHttpRequest();
-        } else if (window.ActiveXObject) {
-            xhr = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-
-        xhr.onreadystatechange = () => {
-            if (xhr.readyState === 4) {
-                resolve(xhr.responseText);
-            }
-        }
-        xhr.open('GET', url, true);
-        xhr.send()
-    });
-}
-
-let promise = makeGETRequest(`${api_url}/deleteFromBasket.json`);
-promise.then(res => {
-    return JSON.parse(res)
-}).then(res =>{
-    console.log(res);
-}).catch(err => {
-    console.log(err);
-});
+// const api_url = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+//
+// function makeGETRequest(url) {
+//     return  new Promise((resolve) => {
+//         let xhr;
+//
+//         if (window.XMLHttpRequest) {
+//             xhr = new XMLHttpRequest();
+//         } else if (window.ActiveXObject) {
+//             xhr = new ActiveXObject("Microsoft.XMLHTTP");
+//         }
+//
+//         xhr.onreadystatechange = () => {
+//             if (xhr.readyState === 4) {
+//                 resolve(xhr.responseText);
+//             }
+//         }
+//         xhr.open('GET', url, true);
+//         xhr.send()
+//     });
+// }
+//
+// let promise = makeGETRequest(`${api_url}/deleteFromBasket.json`);
+// promise.then(res => {
+//     return JSON.parse(res)
+// }).then(res =>{
+//     console.log(res);
+// }).catch(err => {
+//     console.log(err);
+// });
 
 //Регулярные выражения 1-ая часть ДЗ
 let str = document.querySelector('.regex-test').innerText;
@@ -378,7 +378,7 @@ function validateContactForm() {
     }
 
     let email = document.getElementById('emailforcontact');
-    if(email.value.length === 0 || !email.value.match(/[A-Za-z]+@mail.ru/g) && !email.value.match(/[A-Za-z]+\.[A-Za-z]+@mail.ru/g) && !email.value.match(/[A-Za-z]+-[A-Za-z]+@mail.ru/g)) {
+    if(email.value.length === 0 || !email.value.match(/^[A-Za-z]+@mail.ru$/g) && !email.value.match(/^[A-Za-z]+\.[A-Za-z]+@mail.ru$/g) && !email.value.match(/^[A-Za-z]+-[A-Za-z]+@mail.ru$/g)) {
         document.querySelector('.wrong_email').style.display = 'flex';
         email.style.borderColor = 'red';
         return false;
